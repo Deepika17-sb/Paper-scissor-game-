@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center h-screen">
+    <div id="app" class="text-center text-white">
+        <div id="start-screen" class="text-center animate-fade">
+            <h1 class="text-4xl font-bold mb-4">🪨📄✂️ Rock, Paper, Scissors</h1>
+            <input type="text" id="username" placeholder="Enter your name" class="mb-4 px-4 py-2 rounded-lg text-black">
+            <select id="rounds" class="mb-4 px-4 py-2 rounded-lg text-black">
+                <option value="3">3 Rounds</option>
+                <option value="5">5 Rounds</option>
+                <option value="7">7 Rounds</option>
+            </select>
+            <button onclick="startGame()" class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">Start Game</button>
+        </div>
+
+        <div id="game-screen" class="hidden animate-fade">
+            <h2 id="player-name" class="text-2xl font-bold mb-4"></h2>
+            <div class="flex justify-center gap-8 mb-8">
+                <button onclick="playGame('rock')" class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">🪨
+                    Rock</button>
+                <button onclick="playGame('paper')" class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">📄
+                    Paper</button>
+                <button onclick="playGame('scissors')" class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">✂️
+                    Scissors</button>
+            </div>
+            <div class="flex justify-around mb-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Player</h3>
+                    <p id="player-choice" class="text-lg"></p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Computer</h3>
+                    <p id="computer-choice" class="text-lg"></p>
+                </div>
+            </div>
+            <div id="result" class="text-2xl font-semibold mb-4"></div>
+            <div class="flex justify-around mb-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Player Score</h3>
+                    <p id="player-score" class="text-lg">0</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Computer Score</h3>
+                    <p id="computer-score" class="text-lg">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="end-screen" class="hidden text-center animate-fade">
+            <h2 id="final-result" class="text-3xl font-bold mb-4"></h2>
+            <button onclick="restartGame()" class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">Play
+                Again</button>
+        </div>
+    </div>
+
+    <footer class="absolute bottom-4 w-full text-center text-white text-sm">
+        <p>Developed by Vijai Suria</p>
+        <p><a target="_blank" class="text-blue-300 hover:underline" href="
+                https://vijaisuria.github.io">Portfolio</a> | <a href="https://linkedin.com/in/vijaisuria"
+                target="_blank" class="text-blue-300 hover:underline">Linkedin</a> | <a
+                href="https://github.com/vijaisuria" target="_blank" class="text-blue-300 hover:underline">GitHub</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+  </html>
